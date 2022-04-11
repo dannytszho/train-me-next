@@ -1,7 +1,5 @@
-import React from 'react'
+import React from 'react';
 
-const Aware = () => 
+const Aware = () => <h1 className='text-red-600'>aware</h1>;
 
-    <h1>aware</h1>
-
-export default Aware
+export default Aware;
