@@ -29,7 +29,7 @@ const Aware: FC<IProps> = () => {
     <div>
       <div className="w-screen h-screen absolute flex justify-center items-center">
         {show ? (
-          <button type='submit' className="border-black border-2 w-24" onClick={handleClick}>
+          <button type='button' className="border-black border-2 w-24" onClick={handleClick}>
             Start Here!
           </button>
         ) : null}
