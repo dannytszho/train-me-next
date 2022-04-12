@@ -9,7 +9,6 @@ const Home = () => (
       <a>Awareness</a>
     </Link>
     <br />
-    
     <Link href="/stopwatch">
       <a>Stopwatch</a>
     </Link>
