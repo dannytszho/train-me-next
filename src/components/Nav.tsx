@@ -7,7 +7,7 @@ const Nav = () => (
       <Link href="/">Train Me</Link>
       <div className="hidden md:inline-flex item-center space-x-5">
         <Link href="/about">
-          <h3>About</h3>
+          <h3 className="cursor-pointer">About</h3>
         </Link>
         <Link href="/aware">
           <h3 className="text-white cursor-pointer bg-blue-400 px-4 py-1 rounded-full">
