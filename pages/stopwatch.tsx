@@ -47,18 +47,18 @@ const StopWatch = () => {
   }, [isActive, remainingSecs]);
 
   return (
-    <div className="flex flex-col justify-center items-center">
-      <h3>{`${mins}:${secs}:${ms}`}</h3>
+    <div className="flex flex-col h-screen justify-center items-center">
+      <h3 className="text-7xl m-10">{`${mins}:${secs}:${ms}`}</h3>
       <div>
         <button
-          className="border border-blue-200 py-1 h-16 w-16 justify-center rounded-full m-2"
+          className="border border-blue-200 py-1 h-20 w-20 justify-center rounded-full m-6 text-2xl"
           onClick={toggle}
           type="button"
         >
           {isActive ? 'Pause' : 'Start'}
         </button>
         <button
-          className="border border-blue-200 py-1 h-16 w-16 justify-center rounded-full m-2"
+          className="border border-blue-200 py-1 h-20 w-20 justify-center rounded-full m-6 text-2xl"
           onClick={reset}
           type="button"
         >

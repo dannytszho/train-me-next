@@ -30,7 +30,7 @@ const Aware: FC<IProps> = () => {
         {show ? (
           <button
             type="button"
-            className="border-black border-2 w-24"
+            className="border-black border-2 px-2 rounded-full drop-shadow-lg"
             onClick={handleClick}
           >
             Start Here!
