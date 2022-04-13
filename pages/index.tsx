@@ -8,14 +8,16 @@ const Home = () => (
     <Head>
       <title>Train Me</title>
     </Head>
-    <h1>Home</h1>
-    <Link href="/aware">
-      <a>Awareness</a>
-    </Link>
-    <br />
-    <Link href="/stopwatch">
-      <a>Stopwatch</a>
-    </Link>
+    <div className="h-screen">
+      <h1>Home</h1>
+      <Link href="/aware">
+        <a>Awareness</a>
+      </Link>
+      <br />
+      <Link href="/stopwatch">
+        <a>Stopwatch</a>
+      </Link>
+    </div>
   </div>
 );
 

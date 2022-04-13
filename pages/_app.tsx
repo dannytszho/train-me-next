@@ -4,9 +4,10 @@ import React from 'react';
 import Layout from '../src/components/Layout';
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
-  <Layout>
-    <Component {...pageProps} />
-  </Layout>
+  <div className="dark:bg-black dark:text-white transition duration-700">
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  </div>
 );
-
 export default MyApp;
