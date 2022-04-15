@@ -38,6 +38,7 @@ const StopWatch = () => {
     let interval: any = null;
     if (isActive) {
       interval = setInterval(() => {
+        // eslint-disable-next-line no-shadow
         setRemainingSecs((remainingSecs) => remainingSecs + 10);
       }, 10);
     } else if (!isActive && remainingSecs !== 0) {
