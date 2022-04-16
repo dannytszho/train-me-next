@@ -32,10 +32,12 @@ const Nav = () => {
           <Link href="/sign-in">
             <h3>Sign in</h3>
           </Link>
+          <div className="border px-4 py-1 cursor-pointer rounded-full border-blue-400">
+            <Link href="/sign-up">
+              <h3>Get Started</h3>
+            </Link>
+          </div>
         </SignedOut>
-        <h3 className="border px-4 py-1 cursor-pointer rounded-full border-blue-400">
-          Get Started
-        </h3>
         <button
           className="w-6 h-6 rounded-full bg-black text-black dark:bg-white drop-shadow-xl"
           type="button"
