@@ -25,6 +25,11 @@ const Nav = () => {
               Stopwatch
             </h3>
           </Link>
+          <Link href="/players">
+            <h3 className="text-white cursor-pointer bg-blue-400 px-4 py-1 rounded-full drop-shadow-lg">
+              Players
+            </h3>
+          </Link>
         </div>
       </div>
       <div className="flex items-center space-x-5">
