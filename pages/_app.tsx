@@ -1,16 +1,16 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import '../styles/global.css';
 import type { AppProps } from 'next/app';
 import React from 'react';
-import {
-  ClerkProvider,
-  RedirectToSignIn,
-  SignedIn,
-  SignedOut,
-} from '@clerk/nextjs';
+import { ClerkProvider, SignIn, SignedIn, SignedOut } from '@clerk/nextjs';
 import { useRouter } from 'next/router';
 import Layout from '../src/components/Layout';
 
-const publicPages: any = [];
+const publicPages: any = [
+  '/',
+  '/sign-in/[[...index]]',
+  '/sign-up/[[...index]]',
+];
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const { pathname } = useRouter();
@@ -30,7 +30,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
               </Layout>
             </SignedIn>
             <SignedOut>
-              <RedirectToSignIn />
+              <SignIn />
             </SignedOut>
           </>
         )}
