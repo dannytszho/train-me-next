@@ -30,7 +30,7 @@ const Nav = () => {
       <div className="flex items-center space-x-5">
         <SignedOut>
           <Link href="/sign-in">
-            <h3>Sign in</h3>
+            <h3 className="cursor-pointer hover:underline">Sign in</h3>
           </Link>
           <div className="border px-4 py-1 cursor-pointer rounded-full border-blue-400">
             <Link href="/sign-up">
