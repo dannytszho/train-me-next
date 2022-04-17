@@ -15,18 +15,19 @@ const publicPages: any = [
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const { pathname } = useRouter();
   const isPublicPage = publicPages.includes(pathname);
+  const MyComponent = Component as any;
   return (
     <div className="h-screen dark:bg-black dark:text-white transition duration-700">
       <ClerkProvider>
         {isPublicPage ? (
           <Layout>
-            <Component {...pageProps} />
+            <MyComponent {...pageProps} />
           </Layout>
         ) : (
           <>
             <SignedIn>
               <Layout>
-                <Component {...pageProps} />
+                <MyComponent {...pageProps} />
               </Layout>
             </SignedIn>
             <SignedOut>
