@@ -1,29 +1,26 @@
 import React, { useEffect, useState } from 'react';
 
-interface IProps {
-  number: number;
-  time: number;
-  mins: number;
-  sec: number;
-  ms: number;
-}
+/**
+  TODO: convert state to useReducer
+ * 
+*/
 
-const formatNumber = (number: IProps) => `0${number}`.slice(-2);
+const formatNumber = (number: number): string => `0${number}`.slice(-2);
 
-const getRemaining = (time: IProps) => {
+const getRemaining = (time: number) => {
   const mins = Math.floor((+time / 60000) % 60);
   const secs = Math.floor((+time / 1000) % 60);
   const ms = (+time / 10) % 1000;
   return {
-    mins: formatNumber(mins as any),
-    secs: formatNumber(secs as any),
-    ms: formatNumber(ms as any),
+    mins: formatNumber(mins),
+    secs: formatNumber(secs),
+    ms: formatNumber(ms),
   };
 };
 const StopWatch = () => {
   const [remainingSecs, setRemainingSecs] = useState(0);
   const [isActive, setIsActive] = useState(false);
-  const { mins, secs, ms } = getRemaining(remainingSecs as any);
+  const { mins, secs, ms } = getRemaining(remainingSecs);
 
   const toggle = () => {
     setIsActive(!isActive);
@@ -38,8 +35,7 @@ const StopWatch = () => {
     let interval: any = null;
     if (isActive) {
       interval = setInterval(() => {
-        // eslint-disable-next-line no-shadow
-        setRemainingSecs((remainingSecs) => remainingSecs + 10);
+        setRemainingSecs((input) => input + 10);
       }, 10);
     } else if (!isActive && remainingSecs !== 0) {
       clearInterval(interval);
